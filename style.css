@@ -1,0 +1,160 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+a {
+    text-decoration: none;
+}
+li{
+    border-bottom: 1px solid black;
+    padding: 10px 14px;
+}
+ul {
+    list-style-type: none;
+}
+.left{
+    width: 285px;
+    padding-top: 10px;
+    float: left;
+    font-size: 13px;
+}
+
+.leftFist{
+    background-color: #F2F1EB;
+    margin-bottom: 20px;
+}
+.leftSecond{
+    background-color: #F2F1EB;
+    margin-bottom: 20px;
+}
+.MainContentTitle{
+    margin-top: 20px;
+    text-align: center;
+}
+hh3{
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+}
+.td .row hr{
+    line-height: 4px;
+    border: 3px solid #FF9900;
+    display: block;
+    width: 80%;
+    float: left;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.row{
+    float: left;
+    width: 100%;
+}
+.td{
+    margin-left: 285px;
+}
+.avt{
+    width: 30%;
+    text-align: center;
+    margin: 20px;
+    float: left;
+    position: relative;
+}
+.avt img{
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.5);
+}
+.TTSV{
+    margin-top: 60px;
+    position: relative;
+}
+.TT1{
+    width: 30%;
+    float: left;
+    position: relative;
+    background-color: white;
+}
+.TT2{
+    float: left;
+    position: relative;
+    width: 30%;
+    margin-left: 3%;
+    background-color: white;
+}
+
+.TTHT{
+    position: relative;
+}
+.TTHT1{
+    position: relative;
+    margin-left: 5%;
+    float: left;
+    width: 30%;
+}
+.TTHT2{
+    position: relative;
+    margin-left: 20%;
+    float: left;
+    width: 30%;
+}
+
+TenMuc{
+    font-style: italic;
+    font-size: 18px;
+}
+NoiDung{
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.edit{
+    margin-top: 50px;
+    margin-left: 20%;
+    position: relative;
+    background-color: #F2F1EB;
+    width: 55%;
+}
+.md-1{
+    position: relative;
+    float: left;
+    width: 35%;
+    margin-left: 10%;
+}
+.md-2{
+    position: relative;
+    float: left;
+    width: 35%;
+    margin-left: 10%;
+}
+input ,select{
+    width: 225px;
+    height: 30px;
+}
+
+.submit{
+    position: relative;
+    clear: left;
+    margin-left: 45%;
+    margin-bottom: 30px;
+}
+.submit input, .submit button{
+    width: 50px;
+    height: 30px;
+}
+
+.input_nd{
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    width: 50%;
+    border: none;
+}
+
+#editForm{
+    margin-left: 30%;
+    position: absolute;
+    background-color: white;
+    z-index: -10;
+}

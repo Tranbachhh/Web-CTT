@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <div class="left">
+        <div class="leftFist">
+            <br>
+            <h3 style="text-align: center;">
+                <img src="img/avt.png" alt="Trần Xuân Bách 20204634" style="border-radius: 60%;width: 30px;height: 30px;">
+                TRẦN XUÂN BÁCH
+            </h3>
+            <ul>
+                <li>
+                    <a href="">Thư báo</a>
+                </li>
+                <li>
+                    <a href="">Đổi mật khẩu</a>
+                </li>
+                <li>
+                    <a href="">Cấp lại mật khẩu Email trường</a>
+                </li>
+                <li>
+                    <a href="">Thoát đăng nhập</a>
+                </li>
+                <li>
+                    <a href="">Thông tin mật khẩu Email mới</a>
+                </li>
+                <li>
+                    <a href="">Xác nhận khai báo y tế</a>
+                </li>
+                <br>
+            </ul>
+        </div>
+        <div class="leftSecond">
+            <br>
+            <h3 style="text-align: center;">QUẢN LÝ HỒ SƠ SINH VIÊN</h3>
+            <ul>
+                <li>
+                    <a href="">Thông tin sinh viên</a>
+                </li>
+                <li>
+                    <a href="">Cập nhật thông tin cá nhân</a>
+                </li>
+                <li>
+                    <a href="">Thông tin lớp sinh viên</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+        <div class="leftSecond">
+            <br>
+            <h3 style="text-align: center;">ĐÀO TẠO</h3>
+            <ul>
+                <li>
+                    <a href="">Chương trình đào tạo</a>
+                </li>
+                <li>
+                    <a href="">Kế hoạch học tập</a>
+                </li>
+                <li>
+                    <a href="">Kết quả học tập</a>
+                </li>
+                <li>
+                    <a href="">Đồ án tốt nghiệp</a>
+                </li>
+                <li>
+                    <a href="">TThời khoá biểu tạm thời</a>
+                </li>
+            </ul>
+            <br>
+        </div>
+        <div class="leftSecond">
+            <br>
+            <h3 style="text-align: center;">TƯ VÂN TRỰC TUYẾN</h3>
+            <ul>
+                <li>
+                    <a href="">Hỏi đáp trực tuyến</a>
+                </li>
+            <br>
+        </div>
+    </div>
+    <div class="td">
+        <div class="MainContentTitle">
+            <hh3>
+                THÔNG TIN CÁ NHÂN</hh3><hr>
+        </div>
+        <div class="row">
+            <hh3>
+                THÔNG TIN SINH VIÊN
+            </hh3>
+            <a onclick="edit()"><img src="img/edit.png" alt="edit" width="25px"></a>
+            <button onclick="luu()">Lưu</button>
+            <button onclick="cancel()">Cancel</button>
+            <button onclick="reset()">Reset</button>
+        </div>
+        <div class="TTSV">
+            <div class="avt">
+                <img src="img/avt.png" width="200px">
+                <br><br>MSSV:20204634
+            </div>
+            <div class="TT1">
+                <TenMuc>Họ và Tên :</TenMuc> <NoiDung id="ttHoVaTen">Trần Xuân Bách</NoiDung> <br><br>
+                <TenMuc>Năm vào trường : <NoiDung id="ttNamVaoTruong">2020</NoiDung></TenMuc> <br><br>
+                <TenMuc>Bậc đào tạo : <NoiDung id="ttBacDaoTao">Đại học đại trà</NoiDung></TenMuc> <br><br>
+                <TenMuc>Chương trình : <NoiDung id="ttChuongTrinh">Khoa học Máy tính 2020</NoiDung></TenMuc> <br><br>
+                <TenMuc>Khoa/Viện quản lý : <NoiDung id="ttVien">Trường Công nghệ thông tin và Truyền Thông</NoiDung></TenMuc> <br><br>
+                <TenMuc>Tình trạng học tập : <NoiDung id="ttTinhTrangHT">Học</NoiDung></TenMuc> <br><br>
+            </div>
+            <div class="TT2">
+                <TenMuc>Giới tính : <NoiDung id="ttGioiTinh">Nam</NoiDung></TenMuc> <br><br>
+                <TenMuc>Lớp : <NoiDung id="ttLop">Khoa học máy tính 02-K65</NoiDung></TenMuc> <br><br>
+                <TenMuc>Khoá học : <NoiDung id="ttKhoaHoc">65</NoiDung></TenMuc> <br><br>
+                <TenMuc>Email : <NoiDung id="ttEmail">bach.tx204634@sis.hust.edu.vn</NoiDung></TenMuc> <br><br>
+            </div>
+            <div id="editForm">
+                <script>
+                    var editForm=document.getElementById("editForm");
+                    editForm.style.display="none";
+                </script>
+                <form id="myForm">
+                    <label for="hoVaTen"><TenMuc>Họ và Tên:</TenMuc></label>
+                    <input type="text" id="hoVaTen" >
+                    <label form="gioiTinh"><TenMuc>Giới Tính</TenMuc></label>
+                    <select id="gioiTinh">
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                    </select>
+                    <br> <br>
+
+                    <label for="namVaoTruong"><TenMuc>Năm vào Trường:</TenMuc></label>
+                    <input type="number" id="namVaoTruong" min="1950" max="2024" step="1" >
+                    <label for="Lop"><TenMuc>Lớp:</TenMuc></label>
+                    <input type="text" id="Lop" > 
+                    <br><br>
+
+                    <label for="bacDaoTao"><TenMuc>Bậc đào tạo:</TenMuc></label>
+                    <select id="bacDaoTao">
+                        <option value="Đại học đại trà">Đại học đại trà</option>
+                        <option value="Chương trình tiên tiến">Chương trình tiên tiến</option> 
+                    </select>
+                    <label for="khoaHoc"><TenMuc>Khoá học:</TenMuc></label>
+                    <input type="number" id="khoaHoc" min="60" max="68" step="1" >
+                    <br><br>
+
+                    <label for="chuongTrinh"><TenMuc>Chương Trình:</TenMuc></label>
+                    <input type="text" id="chuongTrinh" > 
+                    <label for="Email"><TenMuc>Email:</TenMuc></label>
+                    <input type="text" id="Email" >
+                    <br> <br>
+
+                    <label for="Vien"><TenMuc>Khoa /Viện quản lý:</TenMuc></label>
+                    <input type="text" id="Vien" > <br> <br>
+                    <label for="tinhTrangHT"><TenMuc>Tình trạng học tập:</TenMuc></label>
+                    <select name="tinhTrangHT" id="tinhTrangHT">
+                        <option value="Học">Học</option>
+                        <option value="Bị đình chỉ">Bị đình chỉ</option>
+                        <option value="Đã tốt nghiệp">Đã tốt nghiệp</option>
+                    </select>
+                    <br><br>
+                    <input type="button" onclick="ok()" value="Gửi" style="text-align: center; margin-left: 250px;">
+                </form>
+            </div>
+        </div>
+        <div class="TTHT">
+            <div class="row">
+                <hh3>
+                    THÔNG TIN HỌC TẬP
+                </hh3><br><hr>
+            </div>
+            <div class="TTHT1">
+                <TenMuc>Tổng kết học kỳ : <NoiDung>20212</NoiDung></TenMuc> <br><br>
+                <TenMuc>Trung bình tích luỹ : <NoiDung>3.57</NoiDung></TenMuc> <br><br>
+                <TenMuc>Số tín chỉ nợ đăng ký : <NoiDung>0</NoiDung></TenMuc> <br><br>
+            </div>
+            <div class="TTHT2">
+                <TenMuc>Số TC tích lũy : <NoiDung>62</NoiDung></TenMuc> <br><br>
+                <TenMuc>Trình độ sinh viên : <NoiDung>2</NoiDung></TenMuc> <br><br>
+                <TenMuc>Mức cảnh báo : <NoiDung>M0</NoiDung></TenMuc> <br><br>
+            </div>
+        </div>
+        <div class="TTHT">
+            <div class="row">
+                <hh3>
+                    THÔNG TIN CÁ NHÂN
+                </hh3><br><hr>
+            </div>
+            <div class="TTHT1">
+                <TenMuc>Dân Tộc : <NoiDung>Kinh</NoiDung></TenMuc> <br><br>
+                <TenMuc>Năm TN cấp 3 : <NoiDung>Không có dữ liệu</NoiDung></TenMuc> <br><br>
+                <TenMuc>Địa chỉ : <NoiDung>XÃ AN VIÊN, HUYỆN TIÊN LỮ, TỈNH HƯNG YÊN</NoiDung></TenMuc> <br><br>
+                <TenMuc>Số CMTND : <NoiDung>033***44</NoiDung></TenMuc> <br><br>
+                <TenMuc>Nơi cấp : <NoiDung>Hưng Yên</NoiDung></TenMuc> <br><br>
+            </div>
+            <div class="TTHT2">
+                <TenMuc>Tôn Giáo : <NoiDung>Không</NoiDung></TenMuc> <br><br>
+                <TenMuc>Trường THPT : <NoiDung>THPT chuyên Hưng Yên</NoiDung></TenMuc> <br><br>
+                <TenMuc>Hộ khẩu : <NoiDung>XÃ AN VIÊN, HUYỆN TIÊN LỮ, TỈNH HƯNG YÊN</NoiDung></TenMuc> <br><br>
+                <TenMuc>Điện thoại : <NoiDung>0979******</NoiDung></TenMuc> <br><br>
+            </div>
+            <h4 style="clear: left;">Ghi chú:Nếu sinh viên thấy thông tin của mình chưa chính xác, xin vui lòng liên hệ phòng Đào tạo để cập nhật lại.</h4>
+        </div>
+    </div>
+</body>
+</html>
