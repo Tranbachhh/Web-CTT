@@ -153,8 +153,24 @@ input ,select{
 }
 
 #editForm{
-    margin-left: 30%;
     position: absolute;
     background-color: white;
     z-index: -10;
+}
+
+#myForm{
+    display: flex;
+}
+
+.input_right_1{
+    width: 400px;
+}
+
+.input_right_2{
+    width: 350px;
+}
+
+.editAVT{
+    width: 300px;
+    margin-left: 50px;
 }

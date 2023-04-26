@@ -8,7 +8,8 @@ const TTSVbd={
     Lop:"Khoa học máy tính 02-K65",
     khoaHoc:"65",
     Email:"bach.tx20204634@sis.hust.edu.vn",
-    gioiTinh:"Nam"
+    gioiTinh:"Nam",
+    url_avt:"./img/avt.png"
 }
 var TTSV={ ...TTSVbd};
 var TTSVtt={ ...TTSVbd};
@@ -28,6 +29,8 @@ function edit(){
     document.getElementById("khoaHoc").value=TTSV.khoaHoc;
     document.getElementById("Email").value=TTSV.Email;
     document.getElementById("gioiTinh").value=TTSV.gioiTinh;
+    document.getElementById("avt_edit").src=TTSV.url_avt;
+    document.getElementById("url_avt").value="";
 }
 
 function luu(){
@@ -46,6 +49,7 @@ function luu(){
     document.getElementById("ttKhoaHoc").innerText=TTSV.khoaHoc;
     document.getElementById("ttEmail").innerText=TTSV.Email;
     document.getElementById("ttGioiTinh").innerText=TTSV.gioiTinh;
+    document.getElementById("ttAvt").src=TTSV.url_avt;
     TTSVtt={ ...TTSV};
 }
 
@@ -60,7 +64,9 @@ function ok(){
     TTSV.khoaHoc=document.getElementById("khoaHoc").value;
     TTSV.Email=document.getElementById("Email").value;
     TTSV.gioiTinh=document.getElementById("gioiTinh").value;
+    TTSV.url_avt=document.getElementById("avt_edit").src;
 }
+
 
 function cancel(){
     TTSV={ ...TTSVtt};

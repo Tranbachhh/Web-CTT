@@ -102,7 +102,7 @@
         </div>
         <div class="TTSV">
             <div class="avt">
-                <img src="img/avt.png" width="200px">
+                <img src="img/avt.png" width="200px" height="300px" id="ttAvt">
                 <br><br>MSSV:20204634
             </div>
             <div class="TT1">
@@ -125,46 +125,67 @@
                     editForm.style.display="none";
                 </script>
                 <form id="myForm">
-                    <label for="hoVaTen"><TenMuc>Họ và Tên:</TenMuc></label>
-                    <input type="text" id="hoVaTen" >
-                    <label form="gioiTinh"><TenMuc>Giới Tính</TenMuc></label>
-                    <select id="gioiTinh">
-                        <option value="Nam">Nam</option>
-                        <option value="Nữ">Nữ</option>
-                    </select>
-                    <br> <br>
+                    <div class="editAVT">
+                        <img id="avt_edit" width="200px" height="300px">
+                        <input type="file" id="url_avt" >
+                        <script>
+                            const inputFile = document.getElementById('url_avt');
+                            const previewImage = document.getElementById('avt_edit');
 
-                    <label for="namVaoTruong"><TenMuc>Năm vào Trường:</TenMuc></label>
-                    <input type="number" id="namVaoTruong" min="1950" max="2024" step="1" >
-                    <label for="Lop"><TenMuc>Lớp:</TenMuc></label>
-                    <input type="text" id="Lop" > 
-                    <br><br>
+                            inputFile.addEventListener('change', function() {
+                                const file = this.files[0];
+                                const reader = new FileReader();
 
-                    <label for="bacDaoTao"><TenMuc>Bậc đào tạo:</TenMuc></label>
-                    <select id="bacDaoTao">
-                        <option value="Đại học đại trà">Đại học đại trà</option>
-                        <option value="Chương trình tiên tiến">Chương trình tiên tiến</option> 
-                    </select>
-                    <label for="khoaHoc"><TenMuc>Khoá học:</TenMuc></label>
-                    <input type="number" id="khoaHoc" min="60" max="68" step="1" >
-                    <br><br>
+                                reader.addEventListener('load', function() {
+                                previewImage.src = reader.result;
+                                });
 
-                    <label for="chuongTrinh"><TenMuc>Chương Trình:</TenMuc></label>
-                    <input type="text" id="chuongTrinh" > 
-                    <label for="Email"><TenMuc>Email:</TenMuc></label>
-                    <input type="text" id="Email" >
-                    <br> <br>
-
-                    <label for="Vien"><TenMuc>Khoa /Viện quản lý:</TenMuc></label>
-                    <input type="text" id="Vien" > <br> <br>
-                    <label for="tinhTrangHT"><TenMuc>Tình trạng học tập:</TenMuc></label>
-                    <select name="tinhTrangHT" id="tinhTrangHT">
-                        <option value="Học">Học</option>
-                        <option value="Bị đình chỉ">Bị đình chỉ</option>
-                        <option value="Đã tốt nghiệp">Đã tốt nghiệp</option>
-                    </select>
-                    <br><br>
-                    <input type="button" onclick="ok()" value="Gửi" style="text-align: center; margin-left: 250px;">
+                                if (file) {
+                                reader.readAsDataURL(file);
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="input_right_1">
+                        <label for="hoVaTen"><TenMuc>Họ và Tên:</TenMuc></label>
+                        <input type="text" id="hoVaTen" >
+                        <br> <br>
+                        <label for="namVaoTruong"><TenMuc>Năm vào Trường:</TenMuc></label>
+                        <input type="number" id="namVaoTruong" min="1950" max="2024" step="1" > 
+                        <br><br>
+                        <label for="bacDaoTao"><TenMuc>Bậc đào tạo:</TenMuc></label>
+                        <select id="bacDaoTao">
+                            <option value="Đại học đại trà">Đại học đại trà</option>
+                            <option value="Chương trình tiên tiến">Chương trình tiên tiến</option> 
+                        </select>
+                        <br><br>
+                        <label for="chuongTrinh"><TenMuc>Chương Trình:</TenMuc></label>
+                        <input type="text" id="chuongTrinh" > 
+                        <br> <br>
+                        <label for="Vien"><TenMuc>Khoa /Viện quản lý:</TenMuc></label>
+                        <input type="text" id="Vien" > <br> <br>
+                        <label for="tinhTrangHT"><TenMuc>Tình trạng học tập:</TenMuc></label>
+                        <select name="tinhTrangHT" id="tinhTrangHT">
+                            <option value="Học">Học</option>
+                            <option value="Bị đình chỉ">Bị đình chỉ</option>
+                            <option value="Đã tốt nghiệp">Đã tốt nghiệp</option>
+                        </select>
+                        <br><br>
+                        <input type="button" onclick="ok()" value="Gửi" style="text-align: center;">
+                    </div>
+                    <div class="input_right_2">
+                        <label form="gioiTinh"><TenMuc>Giới Tính</TenMuc></label>
+                        <select id="gioiTinh">
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select><br><br>
+                        <label for="Lop"><TenMuc>Lớp:</TenMuc></label>
+                        <input type="text" id="Lop" ><br><br>
+                        <label for="khoaHoc"><TenMuc>Khoá học:</TenMuc></label>
+                        <input type="number" id="khoaHoc" min="60" max="68" step="1" ><br><br>
+                        <label for="Email"><TenMuc>Email:</TenMuc></label>
+                        <input type="text" id="Email" ><br><br>
+                    </div>
                 </form>
             </div>
         </div>
